@@ -8,7 +8,7 @@ const options = {
   method: 'POST',
   headers: {
     'content-type': 'application/json',
-    'X-RapidAPI-Key': 'b08c78280emshcb99f1f0a23d80ep199165jsna7d1d4ecefc3',
+    'X-RapidAPI-Key': ,
     'X-RapidAPI-Host': 'trains.p.rapidapi.com'
   },
   body: {
@@ -36,7 +36,7 @@ const options = {
   headers: {
     'content-type': 'application/json',
     'Content-Type': 'application/json',
-    'X-RapidAPI-Key': 'b08c78280emshcb99f1f0a23d80ep199165jsna7d1d4ecefc3',
+    'X-RapidAPI-Key': ,
     'X-RapidAPI-Host': 'rstations.p.rapidapi.com'
   },
   body: {search: 'MeeruT'}
@@ -59,7 +59,7 @@ const url = 'https://pnr-status-indian-railway.p.rapidapi.com/pnr-check/85315758
 const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': 'b08c78280emshcb99f1f0a23d80ep199165jsna7d1d4ecefc3',
+    'X-RapidAPI-Key': ,
     'X-RapidAPI-Host': 'pnr-status-indian-railway.p.rapidapi.com'
   }
 };

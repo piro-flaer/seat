@@ -1,0 +1,89 @@
+===> trainschedule
+--also can be used for real time search of trains
+https://rapidapi.com/navii/api/railway-trains-india/
+const fetch = require('node-fetch');
+
+const url = 'https://trains.p.rapidapi.com/';
+const options = {
+  method: 'POST',
+  headers: {
+    'content-type': 'application/json',
+    'X-RapidAPI-Key': 'b08c78280emshcb99f1f0a23d80ep199165jsna7d1d4ecefc3',
+    'X-RapidAPI-Host': 'trains.p.rapidapi.com'
+  },
+  body: {
+    search: 'Seemanchal'
+  }
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
+
+
+===> station code to name
+--can also put city name
+https://rapidapi.com/navii/api/railway-stations-india/
+const fetch = require('node-fetch');
+
+const url = 'https://rstations.p.rapidapi.com/';
+const options = {
+  method: 'POST',
+  headers: {
+    'content-type': 'application/json',
+    'Content-Type': 'application/json',
+    'X-RapidAPI-Key': 'b08c78280emshcb99f1f0a23d80ep199165jsna7d1d4ecefc3',
+    'X-RapidAPI-Host': 'rstations.p.rapidapi.com'
+  },
+  body: {search: 'MeeruT'}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
+
+
+===> pnr
+https://rapidapi.com/dev2919/api/pnr-status-indian-railway
+const fetch = require('node-fetch');
+
+const url = 'https://pnr-status-indian-railway.p.rapidapi.com/pnr-check/8531575878';
+const options = {
+  method: 'GET',
+  headers: {
+    'X-RapidAPI-Key': 'b08c78280emshcb99f1f0a23d80ep199165jsna7d1d4ecefc3',
+    'X-RapidAPI-Host': 'pnr-status-indian-railway.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
+
+
+===>train number information
+https://www.railwayapi.site/docs/operation/train-info
+BASE_URL = api.railwayapi.site
+GET /trains/{trainNumbers}
+
+
+===>train between stations
+https://www.railwayapi.site/docs/operation/trains-between-stations
+BASE_URL = api.railwayapi.site
+GET /trainsBtwStations
+
+
+
+https://api.railwayapi.site/api/v1/trainsBtwStations?fromStation=ANVT&toStation=GZB&allTrains=true
